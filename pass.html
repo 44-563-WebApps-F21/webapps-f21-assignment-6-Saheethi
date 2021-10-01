@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>
+         Assignment 06
+     </title>
+ </head>
+<body>
+<h1>Pass phrase by Sahithi Muddasani</h1>
+<form>
+    <label for="pwrd">Enter the secret phrase </label>
+    <input type="password" id="pwrd" name="pwrd" placeholder="Let me in">
+    <br><br>
+    <label for="confirmpwrd">Enter the phrase </label>
+    <input type="text" id="confirmpwrd" name="confrimpwrd">
+    <br><br>
+    <input type="button" onclick="processPhrase()" value="Check the phrase">
+</form>
+<p id="result">See the result here!</p>
+<script>
+function processPhrase()
+{
+    let correct =0;
+    let wrong = 0;
+
+    password1 = document.getElementById("pwrd").value;
+    cpwrd = document.getElementById("confirmpwrd").value;
+    out = document.getElementById("result");
+
+    if(password1==cpwrd)
+    {
+        correct=correct+1;
+        alert("Access allowed");
+        out.innerHTML="Correct: "+correct;        
+    }
+    else
+    {
+        wrong=wrong+1;
+        alert("Access denied");
+        out.innerHTML="Wrong: "+wrong;
+    }
+}
+
+</script>
+</body>
+</html> 
