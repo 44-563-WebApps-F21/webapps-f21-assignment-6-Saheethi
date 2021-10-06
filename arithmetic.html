@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title> Arithmetic computation </title>
+ </head>
+<body>
+
+<h2>Sahithi Muddasani computes</h2>
+
+<form>
+    <label for="form_base">Enter a base</label>
+    <input type ="number" id="base" name="form_base"  value = 10> <br>
+
+    <label for="form_exp">Enter an exponent </label>
+    <input type ="number" id="exp" name="form_exp" value = 2 > <br>
+
+    <input type="button" onclick="powers()" value = "Compute" id = "power">
+</form>
+
+
+<p id="result"> check here for result of computation </p>
+
+<script> 
+function powers()
+{
+    let outcome = " ";
+    baseValue = document.getElementById("base").value;
+    expValue = document.getElementById("exp").value;
+    output = document.getElementById("result");
+
+    for(let i=1;i<=expValue;i++)
+    {
+       outcome = outcome + Math.pow(baseValue,i) + " ";
+    }
+    output.innerHTML = "Powers of "+ baseValue + " are : "+ outcome + "  (exponent was "+expValue +")";
+
+}
+</script>
+
+</body>
+</html> 
