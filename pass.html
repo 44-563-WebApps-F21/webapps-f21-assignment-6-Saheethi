@@ -17,11 +17,32 @@
     <input type="button" onclick="processPhrase()" value="Check the phrase">
 </form>
 <p id="result">See the result here!</p>
+<img src="angelFish.jpg" alt="Image of AngelFish" height="200" width="200" onclick="newImage()" id = "picture">
 <script>
+    let usingImage = 1;
+function newImage()
+{
+    switch(usingImage)
+    {
+        case 1:
+            document.getElementById("picture").src="angelFish.jpg";
+            usingImage = 2;
+            break;        
+        case 2:
+            document.getElementById("picture").src="deer.jpg";
+            usingImage = 3;
+            break;
+        case 3:
+            document.getElementById("picture").src="sable.jpg";
+            usingImage = 1;
+            break;
+    }
+}
 function processPhrase()
 {
     let correct =0;
     let wrong = 0;
+    
 
     password1 = document.getElementById("pwrd").value;
     cpwrd = document.getElementById("confirmpwrd").value;
