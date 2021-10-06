@@ -16,11 +16,45 @@
 
     <input type="button" onclick="powers()" value = "Compute" id = "power">
 </form>
-
-
 <p id="result"> check here for result of computation </p>
 
+<form>
+    
+    <input type="radio" onclick="processRadio()" id= "plus" name="group">
+    <label for="radio1">+</label><br>   
+    <input type="radio" onclick="processRadio()" id="minus" name="group">
+    <label for="radio2">-</label><br>
+    <input type="radio" onclick="processRadio()" id="times" name="group">  
+    <label for="radio3">*</label><br>  
+    <input type="radio" onclick="processRadio()" id="divide" name="group">
+    <label for="radio4">/</label><br>   
+    
+</form>
+<p id="radioresult"> check here for result of radio buttons </p>
+
 <script> 
+function processRadio()
+{
+    baseValue = document.getElementById("base").value;
+    expValue = document.getElementById("exp").value;
+    radioout = document.getElementById("radioresult");
+
+    if(document.getElementById("plus").checked){
+        out = num(baseValue) + num(expValue) ;
+    }
+    else if(document.getElementById("minus").checked){
+        out = baseValue - expValue ;
+    }
+    else if(document.getElementById("times").checked){
+        out = baseValue * expValue ;
+    }
+    else if(document.getElementById("divide").checked){
+        out = baseValue / expValue ;
+    }  
+  
+    radioout.innerHTML = "Result is : "+ out;
+}
+
 function powers()
 {
     let outcome = " ";
