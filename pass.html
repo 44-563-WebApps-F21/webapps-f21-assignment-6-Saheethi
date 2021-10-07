@@ -24,7 +24,7 @@
     <label for="confirmpwrd">Enter the phrase </label>
     <input type="text" id="confirmpwrd" name="confrimpwrd">
     <br><br>
-    <input type="button" onclick="processPhrase()" value="Check the phrase" class="btn btn-info">
+    <input type="button"  id="lock" onclick="processPhrase()" value="Check the phrase" class="btn btn-info">
 </form>
 <p id="result">See the result here!</p>
 <div>
@@ -50,10 +50,10 @@ function newImage()
             break;
     }
 }
-function processPhrase()
-{
     let correct =0;
     let wrong = 0;
+function processPhrase()
+{  
     
 
     password1 = document.getElementById("pwrd").value;
@@ -71,6 +71,11 @@ function processPhrase()
         wrong=wrong+1;
         alert("Access denied");
         out.innerHTML="Wrong: "+wrong;
+    }
+    if(wrong >= 3){
+        document.getElementById("lock").onclick = function(){
+            alert("Account locked")
+        }
     }
 }
 
