@@ -4,4 +4,4 @@ Hosted at:  https://44-563-webapps-f21.github.io/webapps-f21-assignment-6-Saheet
 
  https://44-563-webapps-f21.github.io/webapps-f21-assignment-6-Saheethi/arthmetic.html
 
-  https://44-563-webapps-f21.github.io/webapps-f21-assignment-6-Saheethi/cars.html
+ https://44-563-webapps-f21.github.io/webapps-f21-assignment-6-Saheethi/cars.html
